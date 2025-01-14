@@ -155,7 +155,7 @@ def train_policy(explainer, model, train_loader, test_loader, optimizer,
     previous_params = [param.clone() for param in explainer.parameters()]
     ep = 0
 
-    best = 1
+    best = 0
 
     # 存储训练前后基线奖励列表
     previous_baseline_list = []
