@@ -347,7 +347,7 @@ def train_policy(explainer, model, train_loader, test_loader, optimizer,
 
         account_list = test_policy_all_with_gnd(explainer, model, test_loader, top_n)
         average = sum(account_list) / len(account_list)
-        if account_list[0] < best:
+        if account_list[0] > best:
             best = account_list[0]
             torch.save({
                 'epoch': ep,
